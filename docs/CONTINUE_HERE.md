@@ -19,3 +19,13 @@ Prepare **sanitized** source import with .gitignore and tests, then implement tr
 ## Ground truth
 
 Refer to AUDIT_2026-10-29.md, ROADMAP.md and TESTING.md; check current GitHub commits/issues before acting. Never mistake proposed changes for implemented fixes. Run only synthetic/disposable DB tests until verified backup/migration safeguards exist. Do not push customer data or legacy credentials.
+
+## Tracked work items (created 29 October 2026)
+
+- [#1: Secure source import and regression baseline](https://github.com/Sonkhe-Shongwe/shongwe-motors/issues/1)
+- [#2: Transaction-safe booking conflict prevention](https://github.com/Sonkhe-Shongwe/shongwe-motors/issues/2)
+- [#3: Preserve bookings during customer/vehicle archival](https://github.com/Sonkhe-Shongwe/shongwe-motors/issues/3)
+- [#4: Replace hardcoded authentication](https://github.com/Sonkhe-Shongwe/shongwe-motors/issues/4)
+- [#5: Database constraints, identifiers and migrations](https://github.com/Sonkhe-Shongwe/shongwe-motors/issues/5)
+
+**Repository state after audit:** documentation-only initial commits; Python source and executable tests are not yet committed. The latest GitHub issues and actual branch commits supersede this dated snapshot.
