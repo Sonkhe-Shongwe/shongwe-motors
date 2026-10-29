@@ -22,3 +22,8 @@ Local syntax, SQLite/authentication tests and UI XML checks can be completed in 
 ## Next milestone
 
 Validate the published repository tree and GitHub Actions, then run the real Windows application from a clean checkout. Once the baseline is signed off, implement booking overlaps with transaction-safe writes, preserve booking history and create migration/backup tests. Keep GitHub README, docs/TESTING.md, docs/ROADMAP.md, this handoff and issue statuses aligned with verified results.
+
+
+## Research checkpoint, 29 October 2026
+
+Research-only decision support: [Full comparative research and modernisation report](RESEARCH_AND_MODERNISATION_2026-10-29.md). Recommended direction is a local-first independent dealership operations and test-drive management system, preserving PyQt5/SQLite for now. Prioritise transaction-safe scheduling, historical booking retention, data migrations and genuine business outcomes before adding a showroom web portal, payments, AI or full workshop ERP. The report is not an approval to change features or claim any proposed functionality implemented. The original seven expected failing safeguards remain open.
