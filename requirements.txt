@@ -1,0 +1,2 @@
+# Windows desktop GUI dependency (Python 3.11 or 3.12 recommended)
+PyQt5>=5.15.9,<6

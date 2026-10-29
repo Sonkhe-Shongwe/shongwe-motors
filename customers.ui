@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomerWindow</class>
+ <widget class="QMainWindow" name="CustomerWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1180</width><height>760</height></rect></property>
+  <property name="windowTitle"><string>Shongwe Motors - Customer Registration</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet"><string notr="true">QWidget#centralwidget { background-color: #F3F6F8; }
+QFrame#frameHeader { background-color: #293742; border: none; }
+QLabel#labelPageTitle { color: white; font-size: 22px; font-weight: bold; }
+QLabel#labelLoggedUser { color: white; font-size: 12px; }
+QGroupBox { background-color: white; border: 1px solid #D7E0E5; border-radius: 7px; margin-top: 11px; font-weight: bold; }
+QGroupBox::title { subcontrol-origin: margin; left: 12px; padding: 0 5px; }
+QLineEdit, QTextEdit, QComboBox, QSpinBox, QDoubleSpinBox, QDateEdit, QTimeEdit { background-color: white; border: 1px solid #CCD6DB; border-radius: 4px; padding: 6px; }
+QLineEdit:focus, QTextEdit:focus, QComboBox:focus, QSpinBox:focus, QDoubleSpinBox:focus, QDateEdit:focus, QTimeEdit:focus { border: 2px solid #0789A6; }
+QPushButton { min-height: 34px; padding: 5px 14px; border-radius: 4px; font-weight: bold; }
+QPushButton#SaveButton { background-color: #0789A6; color: white; border: none; }
+QPushButton#ClearButton, QPushButton#RefreshButton { background-color: white; color: #293742; border: 1px solid #AAB8BF; }
+QPushButton#DeleteButton, QPushButton#ExitButton { background-color: #B84A4A; color: white; border: none; }
+QPushButton#NextButton, QPushButton#BackButton { background-color: #293742; color: white; border: none; }
+QPushButton#LogoutButton { background-color: transparent; color: white; border: 1px solid white; }
+QTableWidget { background-color: white; border: 1px solid #D7E0E5; gridline-color: #E3E9EC; }
+QHeaderView::section { background-color: #293742; color: white; padding: 6px; border: none; }</string></property>
+   <layout class="QVBoxLayout" name="verticalLayoutMain"><property name="spacing"><number>12</number></property><property name="leftMargin"><number>18</number></property><property name="topMargin"><number>0</number></property><property name="rightMargin"><number>18</number></property><property name="bottomMargin"><number>14</number></property>
+    <item><widget class="QFrame" name="frameHeader"><property name="minimumSize"><size><width>0</width><height>92</height></size></property><property name="frameShape"><enum>QFrame::NoFrame</enum></property><layout class="QHBoxLayout" name="horizontalLayoutHeader"><property name="leftMargin"><number>20</number></property><property name="rightMargin"><number>20</number></property>
+      <item><widget class="QLabel" name="labelLogo"><property name="minimumSize"><size><width>230</width><height>70</height></size></property><property name="maximumSize"><size><width>230</width><height>70</height></size></property><property name="pixmap"><pixmap>assets/shongwe_motors_logo.png</pixmap></property><property name="scaledContents"><bool>true</bool></property></widget></item>
+      <item><widget class="QLabel" name="labelPageTitle"><property name="text"><string>Customer Registration</string></property></widget></item>
+      <item><spacer name="horizontalSpacerHeader"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint"><size><width>40</width><height>20</height></size></property></spacer></item>
+      <item><widget class="QLabel" name="labelLoggedUser"><property name="text"><string>Logged in as: Shongwe</string></property><property name="alignment"><set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set></property></widget></item>
+      <item><widget class="QPushButton" name="LogoutButton"><property name="text"><string>Logout</string></property></widget></item>
+    </layout></widget></item>
+    <item><layout class="QHBoxLayout" name="horizontalLayoutBody"><property name="spacing"><number>14</number></property>
+      <item><widget class="QGroupBox" name="groupCustomer"><property name="minimumSize"><size><width>440</width><height>0</height></size></property><property name="title"><string>Customer Information</string></property><layout class="QFormLayout" name="formLayoutCustomer"><property name="labelAlignment"><set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set></property><property name="horizontalSpacing"><number>12</number></property><property name="verticalSpacing"><number>10</number></property>
+        <item row="0" column="0"><widget class="QLabel" name="labelCustomerCode"><property name="text"><string>Customer ID</string></property></widget></item><item row="0" column="1"><widget class="QLineEdit" name="lineCustomerCode"><property name="readOnly"><bool>true</bool></property><property name="placeholderText"><string>Generated automatically</string></property></widget></item>
+        <item row="1" column="0"><widget class="QLabel" name="labelFullName"><property name="text"><string>Full name *</string></property></widget></item><item row="1" column="1"><widget class="QLineEdit" name="lineFullName"><property name="placeholderText"><string>Enter full name</string></property></widget></item>
+        <item row="2" column="0"><widget class="QLabel" name="labelIdNumber"><property name="text"><string>SA ID number *</string></property></widget></item><item row="2" column="1"><widget class="QLineEdit" name="lineIdNumber"><property name="maxLength"><number>13</number></property><property name="placeholderText"><string>13-digit ID number</string></property></widget></item>
+        <item row="3" column="0"><widget class="QLabel" name="labelPhone"><property name="text"><string>Phone number *</string></property></widget></item><item row="3" column="1"><widget class="QLineEdit" name="linePhone"><property name="maxLength"><number>10</number></property><property name="placeholderText"><string>10-digit phone number</string></property></widget></item>
+        <item row="4" column="0"><widget class="QLabel" name="labelEmail"><property name="text"><string>Email *</string></property></widget></item><item row="4" column="1"><widget class="QLineEdit" name="lineEmail"><property name="placeholderText"><string>name@example.com</string></property></widget></item>
+        <item row="5" column="0"><widget class="QLabel" name="labelAddress"><property name="text"><string>Address *</string></property></widget></item><item row="5" column="1"><widget class="QTextEdit" name="textAddress"><property name="maximumSize"><size><width>16777215</width><height>86</height></size></property><property name="placeholderText"><string>Enter physical address</string></property></widget></item>
+        <item row="6" column="0"><widget class="QLabel" name="labelCustomerType"><property name="text"><string>Customer type</string></property></widget></item><item row="6" column="1"><widget class="QComboBox" name="comboCustomerType"><item><property name="text"><string>Individual</string></property></item><item><property name="text"><string>Business</string></property></item></widget></item>
+        <item row="7" column="0"><widget class="QLabel" name="labelContact"><property name="text"><string>Preferred contact</string></property></widget></item><item row="7" column="1"><layout class="QHBoxLayout" name="horizontalLayoutContact"><item><widget class="QRadioButton" name="radioPhone"><property name="text"><string>Phone</string></property><property name="checked"><bool>true</bool></property></widget></item><item><widget class="QRadioButton" name="radioEmail"><property name="text"><string>Email</string></property></widget></item><item><widget class="QRadioButton" name="radioSMS"><property name="text"><string>SMS</string></property></widget></item></layout></item>
+      </layout></widget></item>
+      <item><widget class="QGroupBox" name="groupCustomerTable"><property name="title"><string>Saved Customers</string></property><layout class="QVBoxLayout" name="verticalLayoutTable"><item><widget class="QTableWidget" name="tableCustomers"><property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property><property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property><column><property name="text"><string>Customer ID</string></property></column><column><property name="text"><string>Full Name</string></property></column><column><property name="text"><string>Phone</string></property></column><column><property name="text"><string>Email</string></property></column><column><property name="text"><string>Type</string></property></column></widget></item></layout></widget></item>
+    </layout></item>
+    <item><layout class="QHBoxLayout" name="horizontalLayoutButtons"><item><widget class="QPushButton" name="SaveButton"><property name="text"><string>Save Customer</string></property></widget></item><item><widget class="QPushButton" name="ClearButton"><property name="text"><string>Clear Fields</string></property></widget></item><item><widget class="QPushButton" name="DeleteButton"><property name="text"><string>Delete Selected</string></property></widget></item><item><widget class="QPushButton" name="RefreshButton"><property name="text"><string>Refresh</string></property></widget></item><item><spacer name="horizontalSpacerButtons"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint"><size><width>40</width><height>20</height></size></property></spacer></item><item><widget class="QPushButton" name="NextButton"><property name="text"><string>Next: Vehicles</string></property></widget></item></layout></item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/><connections/>
+</ui>

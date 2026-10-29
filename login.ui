@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWindow</class>
+ <widget class="QMainWindow" name="LoginWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>840</width><height>620</height></rect></property>
+  <property name="minimumSize"><size><width>840</width><height>620</height></size></property>
+  <property name="maximumSize"><size><width>840</width><height>620</height></size></property>
+  <property name="windowTitle"><string>Shongwe Motors - Login</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet"><string notr="true">QWidget#centralwidget { background-color: #0789A6; }
+QFrame#frameLoginCard { background-color: white; border-radius: 14px; }
+QLineEdit { background: white; border: 1px solid #D4DCE0; border-radius: 4px; padding: 9px; font-size: 12px; }
+QLineEdit:focus { border: 2px solid #0789A6; }
+QPushButton#LoginButton { background-color: #0789A6; color: white; border: none; border-radius: 4px; padding: 10px; font-weight: bold; }
+QPushButton#LoginButton:hover { background-color: #06758F; }
+QPushButton#CancelButton { background-color: white; color: #0789A6; border: 1px solid #0789A6; border-radius: 4px; padding: 10px; font-weight: bold; }
+QPushButton#CancelButton:hover { background-color: #EAF7FA; }</string></property>
+   <layout class="QHBoxLayout" name="horizontalLayoutOuter">
+    <property name="leftMargin"><number>185</number></property><property name="topMargin"><number>38</number></property><property name="rightMargin"><number>185</number></property><property name="bottomMargin"><number>38</number></property>
+    <item>
+     <widget class="QFrame" name="frameLoginCard">
+      <property name="minimumSize"><size><width>470</width><height>544</height></size></property>
+      <property name="maximumSize"><size><width>470</width><height>544</height></size></property>
+      <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+      <layout class="QVBoxLayout" name="verticalLayoutCard">
+       <property name="leftMargin"><number>48</number></property><property name="topMargin"><number>24</number></property><property name="rightMargin"><number>48</number></property><property name="bottomMargin"><number>22</number></property><property name="spacing"><number>9</number></property>
+       <item><widget class="QLabel" name="labelLogo"><property name="minimumSize"><size><width>0</width><height>112</height></size></property><property name="pixmap"><pixmap>assets/shongwe_motors_logo.png</pixmap></property><property name="scaledContents"><bool>true</bool></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+       <item><widget class="QLabel" name="labelTitle"><property name="font"><font><pointsize>20</pointsize><weight>75</weight><bold>true</bold></font></property><property name="text"><string>Welcome Back</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+       <item><widget class="QLabel" name="labelSubtitle"><property name="styleSheet"><string notr="true">color:#6B7378;</string></property><property name="text"><string>Sign in to the administration system</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+       <item><spacer name="verticalSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>8</height></size></property></spacer></item>
+       <item><widget class="QLabel" name="labelUsername"><property name="text"><string>Username</string></property></widget></item>
+       <item><widget class="QLineEdit" name="lineUsername"><property name="minimumSize"><size><width>0</width><height>43</height></size></property><property name="placeholderText"><string>Enter your username</string></property></widget></item>
+       <item><widget class="QLabel" name="labelPassword"><property name="text"><string>Password</string></property></widget></item>
+       <item><widget class="QLineEdit" name="linePassword"><property name="minimumSize"><size><width>0</width><height>43</height></size></property><property name="echoMode"><enum>QLineEdit::Password</enum></property><property name="placeholderText"><string>Enter your password</string></property></widget></item>
+       <item><widget class="QCheckBox" name="checkShowPassword"><property name="text"><string>Show Password</string></property></widget></item>
+       <item><widget class="QPushButton" name="LoginButton"><property name="minimumSize"><size><width>0</width><height>43</height></size></property><property name="text"><string>LOGIN</string></property></widget></item>
+       <item><widget class="QPushButton" name="CancelButton"><property name="minimumSize"><size><width>0</width><height>43</height></size></property><property name="text"><string>CANCEL</string></property></widget></item>
+       <item><widget class="QLabel" name="labelFooter"><property name="styleSheet"><string notr="true">color:#777777; font-size:11px;</string></property><property name="text"><string>Authorised dealership personnel only</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/><connections/>
+</ui>
