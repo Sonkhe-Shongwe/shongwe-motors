@@ -2,7 +2,7 @@
 
 **29 October 2026, initial code publication checkpoint**
 
-The baseline tests run against fresh, temporary SQLite databases, not user data. The initial source audit recorded **15 passes and 7 strict expected failures**. After securely packaging the application, tests additionally verify administrator creation, password hashing, credential misuse, malformed account handling and absence of hardcoded login variables.
+The baseline tests run against fresh, temporary SQLite databases, not user data. **Verified after publication: 22 passed, 7 strict expected failures**, with Python 3.13 in the isolated local environment. GitHub Actions also completed successfully for the published source commit on its Python 3.11 and 3.12 test matrix. Live Windows GUI testing remains pending. The initial source audit recorded **15 passes and 7 strict expected failures**. After securely packaging the application, tests additionally verify administrator creation, password hashing, credential misuse, malformed account handling and absence of hardcoded login variables.
 
 The seven known vulnerabilities have intentionally not been marked fixed. They cover two simultaneous bookings sharing a slot, deletion cascades on both customer and vehicle, reused generated identifiers after deletion, negative money/mileage, invalid booking dates/times and booking a sold vehicle through direct database access. The code is **not** cleared for real business records.
 
