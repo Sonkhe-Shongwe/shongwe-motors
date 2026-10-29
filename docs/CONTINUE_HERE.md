@@ -1,6 +1,6 @@
 # Shongwe Motors development continuity
 
-**Checkpoint: 29 October 2026, initial safe-source publication.** The original assignment ZIP was inspected and its Python, GUI, logo and Windows scripts were assembled into a publishable repository layout. **Never upload the original ZIP unchanged**, as it contains a plaintext demonstration login credential.
+**Checkpoint: 29 October 2026, initial safe-source publication.** The published source+logo commit is `896aaf738c50b090073d0dc50ffb7ea41b21c296`. File-level Git object SHA verification matched all 23 local source and asset files against GitHub. CI for that commit succeeded (workflow run `40872299886`). Local tests: **22 passed, 7 strict xfails**. The original assignment ZIP was inspected and its Python, GUI, logo and Windows scripts were assembled into a publishable repository layout. **Never upload the original ZIP unchanged**, as it contains a plaintext demonstration login credential.
 
 ## Implemented in initial publication
 
