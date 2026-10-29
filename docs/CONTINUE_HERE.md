@@ -27,3 +27,11 @@ Validate the published repository tree and GitHub Actions, then run the real Win
 ## Research checkpoint, 29 October 2026
 
 Research-only decision support: [Full comparative research and modernisation report](RESEARCH_AND_MODERNISATION_2026-10-29.md). Recommended direction is a local-first independent dealership operations and test-drive management system, preserving PyQt5/SQLite for now. Prioritise transaction-safe scheduling, historical booking retention, data migrations and genuine business outcomes before adding a showroom web portal, payments, AI or full workshop ERP. The report is not an approval to change features or claim any proposed functionality implemented. The original seven expected failing safeguards remain open.
+
+
+## Master blueprint checkpoint, 29 October 2026
+
+- **Authoritative proposed engineering plan:** [MASTER_DEVELOPMENT_BLUEPRINT_1_0.md](MASTER_DEVELOPMENT_BLUEPRINT_1_0.md), version 1.0 **DRAFT FOR OWNER REVIEW**. This document consolidates the research, formal business flow, target ERD, booking state/interval policy, SQLite migration and backup safeguards, authentication/privacy boundary, acceptance cases BK-01..BK-12 and release gates G0..G8.
+- **Implementation status:** documentation only at this checkpoint. No app source, schema, booking rules or tests were modified by authoring the blueprint; the seven known strict expected failures remain until actual fixes are tested.
+- **Open policy gate:** D-01..D-06 (types, durations, buffers, operating hours, consultant/customer conflicts, inventory Reserved meaning, lifecycle transitions) must be explicitly decided before hard-coding booking business rules. Proposed defaults are not owner-approved.
+- **Next execution step:** M0 Windows four-screen parity walkthrough using synthetic data, then M1/M2 transaction-safe booking and historical-data migration as one compatible, recoverable change set. Update this document, README, TESTING, roadmap and GitHub issues after each accepted milestone.
