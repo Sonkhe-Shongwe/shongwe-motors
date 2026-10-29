@@ -66,6 +66,10 @@ The original known defects are marked with `xfail(strict=True)`. Expected failur
 | `tests/` | Reproducible isolated regression tests |
 | `docs/` | Audit, roadmap, test findings and development handoff |
 
+## Research-led modernisation direction
+
+The [full competitive research and modernisation report](docs/RESEARCH_AND_MODERNISATION_2026-10-29.md) evaluates real dealership products, scheduling systems, similar open-source projects, database integrity, security and the recommended portfolio scope. **Research recommendations are not implemented features.**
+
 ## Engineering progress and known risks
 
 Review the [source audit](docs/AUDIT_2026-10-29.md), [roadmap](docs/ROADMAP.md), [test evidence](docs/TESTING.md) and [continuation handoff](docs/CONTINUE_HERE.md). The P0 implementation issues are: [#2 double-bookings](https://github.com/Sonkhe-Shongwe/shongwe-motors/issues/2), [#3 deletion/history loss](https://github.com/Sonkhe-Shongwe/shongwe-motors/issues/3), [#4 authentication hardening](https://github.com/Sonkhe-Shongwe/shongwe-motors/issues/4) and [#5 data integrity](https://github.com/Sonkhe-Shongwe/shongwe-motors/issues/5).
