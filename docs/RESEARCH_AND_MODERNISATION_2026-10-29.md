@@ -36,7 +36,7 @@ This report combines four kinds of evidence. **S = directly inspected Shongwe Mo
 
 The source review covered `main.py`, `database.py`, `auth.py`, four `.ui` files, CI, requirements, tests and README in the published project ZIP. The published baseline has **22 passing tests and 7 expected failures (xfail)**. The expected failures represent known missing safeguards, not successful protection. The 29 October GitHub Actions run passed the configured headless Python checks; a live Windows GUI walkthrough, real concurrent-writer tests and a tested installer remain outstanding. [S]
 
-The market review considered a South African dealership platform, automotive industry guidance, dealership showroom repositories, repair-shop software and scheduling software. Technical design guidance was drawn from SQLite, Python, Qt, pytest-qt, OWASP, NIST, PyInstaller and South Africa's Information Regulator. [O1-O13, V1-V5, R1-R3]
+The market review considered a South African dealership platform, automotive industry guidance, dealership showroom repositories, repair-shop software and scheduling software. Technical design guidance was drawn from SQLite, Python, Qt, pytest-qt, OWASP, NIST, PyInstaller and South African POPIA guidance and law. [O1-O13, V1-V5, R1-R3]
 
 **Important constraint:** The following is a plan for an evidence-backed portfolio release, not a representation that Shongwe Motors already satisfies the proposed controls.
 
@@ -78,7 +78,7 @@ Source-specific observations: `database.py` currently uses `MAX(id)+1` to sugges
 
 ## 4.1 Industry-level dealership model
 
-Automotive dealership guidance distinguishes inventory, CRM, lead follow-up and appointment-related workflows. This suggests that the useful core is a **connected customer, vehicle and opportunity record**, not disconnected CRUD screens. Industry guidance also describes lead sources and assignment to sales personnel. [O14]
+Dealership CRM research identifies lead capture, customer follow-up, staff ownership, sales milestones and vehicle stock links as central operational requirements. This suggests that the useful core is a **connected customer, vehicle and opportunity record**, not disconnected CRUD screens. This source is an industry consultant guide, not an independent assessment of our application. [V6]
 
 For our scope, the minimal dealership business chain is:
 
@@ -109,7 +109,7 @@ These are *proposed* states; exact transition rules must be confirmed before imp
 
 ## 4.3 Strongest transferable lessons
 
-**Lesson A: Business state is more important than number of screens.** A record should have a reasoned lifecycle: an enquiry is not a sale; an appointment is not an inventory reservation; an available vehicle is not necessarily free for every appointment time. [A, O14, V1]
+**Lesson A: Business state is more important than number of screens.** A record should have a reasoned lifecycle: an enquiry is not a sale; an appointment is not an inventory reservation; an available vehicle is not necessarily free for every appointment time. [A, V6, V1]
 
 **Lesson B: Availability is an intersection of constraints.** A booking is valid only when the appointment fits the vehicle, the assigned consultant (if resource-bound), opening hours, existing active bookings and any buffer. Microsoft Bookings illustrates this type of scheduling rule. [O1]
 
@@ -244,7 +244,7 @@ The current `auth.py` uses PBKDF2-HMAC-SHA256 with 600,000 iterations and a rand
 
 ## 8.2 Privacy protection
 
-The source includes South African identity number, contact and address fields. Those are sensitive business records even when the app is only a portfolio demonstration. Adopt data minimisation, synthetic demo identities, no personal data in logs/screenshots, clear retention policies, protected storage, backups that do not leave local control, and a recorded procedure for correcting or removing personal data where legally appropriate. The Information Regulator describes reasonable security safeguards and continuing risk review under POPIA. This is product-design guidance, not legal certification. [O11]
+The source includes South African identity number, contact and address fields. Those are sensitive business records even when the app is only a portfolio demonstration. Adopt data minimisation, synthetic demo identities, no personal data in logs/screenshots, clear retention policies, protected storage, backups that do not leave local control, and a recorded procedure for correcting or removing personal data where legally appropriate. Section 19 of South Africa's POPIA requires reasonable technical and organisational safeguards and ongoing review of foreseeable risks. This is product-design guidance, not legal certification. [O11]
 
 **Data location:** move the database out of the source checkout and into a per-user application-data directory. Explicitly document where data, credentials, logs, exports and backups reside. Keep all of them out of repository commits, installers and demo archives.
 
@@ -458,10 +458,9 @@ All external sources were reviewed for this report on 29 October 2026. Links bel
 - **O8. Python sqlite3 connection context behaviour:** https://docs.python.org/3/library/sqlite3.html
 - **O9. OWASP Password Storage Cheat Sheet:** https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
 - **O10. NIST SP 800-63B digital authentication guidance:** https://pages.nist.gov/800-63-4/sp800-63b.html
-- **O11. Information Regulator, guidance discussing POPIA security safeguards:** https://inforegulator.org.za/wp-content/uploads/2020/07/InfoRegSA-GuidanceNote-Processing-SpecialPersonalInformation-20210628.pdf
+- **O11. POPIA Section 19, security safeguards (South African law text):** https://lawlibrary.org.za/akn/za/act/2013/4/eng%402013-11-26
 - **O12. Qt model/view programming:** https://doc.qt.io/qt-6/model-view-programming.html
 - **O13. Riverbank PyQt license; Qt for Python licensing:** https://en.riverbankcomputing.com/software/pyqt ; https://wiki.qt.io/Qt_for_Python
-- **O14. STAR dealership infrastructure guidelines:** https://www.starstandard.org/wp-content/uploads/2022/11/2020STARDealerInfrastructureGuidelineDIG-English.pdf
 - **O15. pytest-qt documentation:** https://pytest-qt.readthedocs.io/en/master/intro.html
 - **O16. GitHub Python build and test workflows:** https://docs.github.com/en/actions/tutorials/build-and-test-code/python
 - **O17. PyInstaller manual:** https://pyinstaller.org/en/stable/
@@ -473,6 +472,7 @@ All external sources were reviewed for this report on 29 October 2026. Links bel
 - **V3. AutoLeap features:** https://autoleap.com/features/
 - **V4. SimplyBook.me booking features:** https://simplybook.me/index.php/en/booking-system-features
 - **V5. Odoo Fleet features:** https://www.odoo.com/app/fleet-features
+- **V6. Pasch Group industry dealership CRM overview:** https://www.paschgroup.com/vendor-directory/automotive-crm/
 
 **Open-source descriptions (R)**
 
