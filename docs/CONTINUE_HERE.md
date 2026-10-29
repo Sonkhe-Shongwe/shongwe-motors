@@ -35,3 +35,5 @@ Research-only decision support: [Full comparative research and modernisation rep
 - **Implementation status:** documentation only at this checkpoint. No app source, schema, booking rules or tests were modified by authoring the blueprint; the seven known strict expected failures remain until actual fixes are tested.
 - **Open policy gate:** D-01..D-06 (types, durations, buffers, operating hours, consultant/customer conflicts, inventory Reserved meaning, lifecycle transitions) must be explicitly decided before hard-coding booking business rules. Proposed defaults are not owner-approved.
 - **Next execution step:** M0 Windows four-screen parity walkthrough using synthetic data, then M1/M2 transaction-safe booking and historical-data migration as one compatible, recoverable change set. Update this document, README, TESTING, roadmap and GitHub issues after each accepted milestone.
+
+- **M0 tracking issue:** [#6 Approve booking business rules and verify Windows GUI baseline](https://github.com/Sonkhe-Shongwe/shongwe-motors/issues/6). This is the formal next action before the booking/migration implementation issues.
