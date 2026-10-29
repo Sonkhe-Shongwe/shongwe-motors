@@ -66,6 +66,10 @@ The original known defects are marked with `xfail(strict=True)`. Expected failur
 | `tests/` | Reproducible isolated regression tests |
 | `docs/` | Audit, roadmap, test findings and development handoff |
 
+## Master development specification
+
+[**Shongwe Motors 1.0 Master Development Blueprint**](docs/MASTER_DEVELOPMENT_BLUEPRINT_1_0.md) is the proposed implementation contract. It defines the v1 scope, business workflows, booking conflict algorithm, conceptual ERD, database migration/retention rules, 12 scheduling test scenarios, release gates and unresolved decisions. **Draft for owner review, not proof of implemented features.** Use it with the [research report](docs/RESEARCH_AND_MODERNISATION_2026-10-29.md), [source audit](docs/AUDIT_2026-10-29.md) and [continuity handoff](docs/CONTINUE_HERE.md).
+
 ## Research-led modernisation direction
 
 The [full competitive research and modernisation report](docs/RESEARCH_AND_MODERNISATION_2026-10-29.md) evaluates real dealership products, scheduling systems, similar open-source projects, database integrity, security and the recommended portfolio scope. **Research recommendations are not implemented features.**
