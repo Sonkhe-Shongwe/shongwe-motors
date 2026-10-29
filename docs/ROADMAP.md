@@ -29,3 +29,7 @@ Appointment duration (fixed or per type), allowed hours, consultant and customer
 ## Development protocol
 
 First write a failing requirement test, then make the narrowest compatible code change. Verify the full baseline, preserve old data, run a GUI smoke pass whenever the environment supports it, and capture actual evidence. Each coherent phase belongs in a reviewable PR with documentation updates. A proposed feature is not implemented until the test gate passes.
+
+## Master blueprint (29 October 2026)
+
+The [Shongwe Motors 1.0 Master Development Blueprint](MASTER_DEVELOPMENT_BLUEPRINT_1_0.md) consolidates this earlier roadmap into proposed milestones M0-M7 and gates G0-G8. **Do not interpret the blueprint as implemented functionality or automatically approved business decisions.** Where this legacy roadmap differs in sequencing or scope, review the decision register and keep tests and data preservation as the controlling release conditions. The next checkpoint is M0 Windows parity plus explicitly resolved booking policy D-01..D-06 before schema or scheduling code changes.
